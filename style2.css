@@ -4,16 +4,9 @@
 
 body{
     font-family: 'Roboto';
+    background-color: #F8F6F8; 
 }
 
-/* .navbar {
-    
-    background-color: white;
-    position: fixed; 
-    top: 0;
-    width: 100%;
-    
-} */
 
 .card-body{
   margin: 10px;
@@ -21,3 +14,21 @@ body{
   height: 300px;
 
 }
+.x{
+  color: #9032C8;
+}
+
+.mserv{
+  text-align: right;
+  font-size: 20px;
+  color: #9032C8;
+}
+
+.fecha{
+  background-color: #9032C8;
+  color: white;
+  font-size: 18px;
+}
+
+
+
