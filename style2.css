@@ -1,0 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+
+body{
+    font-family: 'Roboto';
+}
+
+/* .navbar {
+    
+    background-color: white;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    
+} */
+
+.card-body{
+  margin: 10px;
+  width: 400px;
+  height: 300px;
+
+}
