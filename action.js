@@ -45,21 +45,23 @@ function servicios(){
     var content = "";
 
     for(var i = 0; i < confirmados.length; i++){
-
-        
-      content += "<div class='container-fluid'>";
+ 
+      content += "<div class='card container-fluid'>";
       content += "<div class='row'>";
       content += "<div class='col-12'";
       content += "<p>Dirección</p>";
-      content += "<h4>" + confirmados[i].addres_street + ", " + confirmados[i].addres_neighborhood + ", " + confirmados[i].city + "</h4>";
+      content += "<h4>" + "<b>" + confirmados[i].addres_street + ", " + confirmados[i].addres_neighborhood + ", " + confirmados[i].city + "." + "</b>" + "</h4>";
       content += "</div";
       content += "<div class='col-12'>";
-      content += "<p>Fecha</p>" + "<p>" + confirmados[i].date + "</p>";
+      content += "<p>Fecha</p>" + "<h5>" + "<b>" + confirmados[i].date + "</b>" + "</h5>";
       content += "</div>";
       content += "<div class='col-12'>";
-      content += "<p>Hora</p>" + "<p>" + confirmados[i].hour + "</p>";
+      content += "<p>Hora</p>" + "<h5>" + "<b>" + confirmados[i].hour + "</b>" + "</h5>";
       content += "</div>";
-      content += "<p>Duración</p>" + "<p>" + confirmados[i].lenght + "</p>" + "<p>horas</p>";
+      content += "<div class='col-12'>";
+      content += "<p>Duración</p>" + "<h5>" + "<b>" + confirmados[i].lenght + " " + "horas" + "</b>" + "</h5>";
+      content += "</div>";
+      content += "<button>" + confirmados[i].service_type +  "</button>";
       content += "</div>";
       content += "</div>";
       content += "</div>"
@@ -166,19 +168,25 @@ function disponibles(){
   var content="";
 
   for(var i=0; i<disponibles.length; i++){
-        content += "<div class='container-fluid'>";
-        content += "<div class='row'>";
-        content += "<div class='col-12'";
-        content += "<p>Dirección</p>";
-        content += "<h4>" + disponibles[i].addres_street + disponibles[i].addres_neighborhood + disponibles[i].city + "</h4>";
-        content += "<div class='col-12'>";
-        content += "<p>Fecha</p>" + "<p>" + disponibles[i].date + "</p>";
-        content += "</div>";
-        content += "<p>Hora</p>" + "<p>" + disponibles[i].hour + "</p>";
-        content += "<p>Duración</p>" + "<p>" + disponibles[i].lenght + "</p>" + "<p>horas</p>";
-        content += "</div>";
-        content += "</div>";
-        content += "</div>"
+    content += "<div class='card container-fluid'>";
+    content += "<div class='row'>";
+    content += "<div class='col-12'";
+    content += "<p>Dirección</p>";
+    content += "<h4>" + "<b>" + disponibles[i].addres_street + ", " + disponibles[i].addres_neighborhood + ", " + disponibles[i].city + "." + "</b>" + "</h4>";
+    content += "</div";
+    content += "<div class='col-12'>";
+    content += "<p>Fecha</p>" + "<h5>" + "<b>" + disponibles[i].date + "</b>" + "</h5>";
+    content += "</div>";
+    content += "<div class='col-12'>";
+    content += "<p>Hora</p>" + "<h5>" + "<b>" + disponibles[i].hour + "</b>" + "</h5>";
+    content += "</div>";
+    content += "<div class='col-12'>";
+    content += "<p>Duración</p>" + "<h5>" + "<b>" + disponibles[i].lenght + " " + "horas" + "</b>" + "</h5>";
+    content += "</div>";
+    content += "<button>" + disponibles[i].service_type +  "</button>";
+    content += "</div>";
+    content += "</div>";
+    content += "</div>"
 
     }
     document.getElementById("result1").innerHTML = content;
