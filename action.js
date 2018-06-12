@@ -46,22 +46,24 @@ function servicios(){
 
     for(var i = 0; i < confirmados.length; i++){
  
-      content += "<div class='card container-fluid'>";
+      content += "<div class='card container'>";
       content += "<div class='row'>";
-      content += "<div class='col-12'";
+      content += "<div class='col-8'";
       content += "<p>Dirección</p>";
       content += "<h4>" + "<b>" + confirmados[i].addres_street + ", " + confirmados[i].addres_neighborhood + ", " + confirmados[i].city + "." + "</b>" + "</h4>";
       content += "</div";
-      content += "<div class='col-12'>";
+      content += "<div class='col-8'>";
       content += "<p>Fecha</p>" + "<h5>" + "<b>" + confirmados[i].date + "</b>" + "</h5>";
       content += "</div>";
-      content += "<div class='col-12'>";
+      content += "<div class='col-8'>";
       content += "<p>Hora</p>" + "<h5>" + "<b>" + confirmados[i].hour + "</b>" + "</h5>";
       content += "</div>";
-      content += "<div class='col-12'>";
+      content += "<div class='col-8'>";
       content += "<p>Duración</p>" + "<h5>" + "<b>" + confirmados[i].lenght + " " + "horas" + "</b>" + "</h5>";
       content += "</div>";
-      content += "<button>" + confirmados[i].service_type +  "</button>";
+      content += "<button type='button' class='btn btn-light'>" + confirmados[i].service_type +  "</button>";
+      content += "<div class='col-12'>";
+      content += "<a href='confDetail.html'><button type='button' class='btn btn-lg btn-block card1' style='background-color: #9032C8;'>Ver detalle</button></a>"; 
       content += "</div>";
       content += "</div>";
       content += "</div>"
@@ -184,6 +186,8 @@ function disponibles(){
     content += "<p>Duración</p>" + "<h5>" + "<b>" + disponibles[i].lenght + " " + "horas" + "</b>" + "</h5>";
     content += "</div>";
     content += "<button>" + disponibles[i].service_type +  "</button>";
+    content += "<div class='col-12'>";
+    content += "<button type='button' class='btn btn-lg btn-block'><a href='dispDetail.hyml'>" + "Ver detalle" + "</button>";
     content += "</div>";
     content += "</div>";
     content += "</div>"

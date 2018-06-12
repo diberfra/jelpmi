@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="action.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJYbgvlGBmUq8TW8xHyFqCMRqX5UzqW7w&callback=myMap"></script>
-    <title>Detalle</title>
-</head>
-<body>
-    <div id="map" style="width:400px;height:400px;background: black"></div>
-</body>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 19.412901, lng: -99.180274};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJYbgvlGBmUq8TW8xHyFqCMRqX5UzqW7w&callback=initMap">
+    </script>
+  </body>
 </html>
